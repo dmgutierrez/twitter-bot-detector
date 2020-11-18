@@ -1,0 +1,11 @@
+numpy
+pandas
+scikit-learn
+twint
+tweepy
+joblib
+GetOldTweets3
+joblib
+torch==1.6.0
+torchvision==0.7.0+gpu
+flair==0.6.0
