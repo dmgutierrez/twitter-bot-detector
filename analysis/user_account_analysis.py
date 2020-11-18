@@ -6,6 +6,7 @@ from data_models.twitter_models import StatusDoc
 from connectors.twitter_api_connector import TwitterConnector
 from analysis.feature_extraction import FeatureExtraction
 from typing import Optional
+from scipy.spatial import distance
 from helper.settings import (logger, popularity_metric, boolean_cols,
                              drop_num_cols, id_col, scaler_filename,
                              document_col, cat_cols, link_information,
@@ -188,3 +189,12 @@ class UserAccountAnalysis:
         except Exception as e:
             logger.error(e)
         return doc_emb
+
+    @staticmethod
+    def embedding_cosine_similarity(x: np.array, y: np.array) -> float:
+        similarity: float = 0.0
+        try:
+            similarity: float = round(float(1 - distance.cosine(x, y)), 3)
+        except Exception as e:
+            logger.error(e)
+        return similarity

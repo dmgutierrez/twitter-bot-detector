@@ -67,8 +67,9 @@ class UserAccountAPI:
             self.set_up_model()
 
             # 2. Obtain credibility
-            credibility: float = round(float(
+            credibility: float = round(1 - float(
                 self.model.predict(input_user_embedding)), 3)
+
         except Exception as e:
             logger.error(e)
         return credibility
@@ -88,3 +89,12 @@ class UserAccountAPI:
         except Exception as e:
             logger.error(e)
         return user_embedding
+
+    def embedding_cosine_similarity(self, x: np.array, y: np.array) -> float:
+        similarity: float = 0.0
+        try:
+            similarity: float = self.user_account_analysis.embedding_cosine_similarity(
+                x=x, y=y)
+        except Exception as e:
+            logger.error(e)
+        return similarity
