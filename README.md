@@ -2,6 +2,10 @@
 
 A Transformed-based approach for encoding Twitter user Accounts. The model can be used to generate 256-dimensional embeddings from an input user account. This encoding can be employed in any Information Retrieval (IR) application.
 
+## Dataset
+
+To train the model, the following dataset was employed: [The Ultimate Twitter Human-Bot Dataset](https://www.kaggle.com/davidmartngutirrez/twitter-bots-accounts).
+
 
 ## Set up
 
