@@ -1,10 +1,10 @@
 import numpy as np
 from api.user_account_api import UserAccountAPI
 
-CONSUMER_KEY = "WcIJMyBF3spFEtRGHwqDlAKDT"
-CONSUMER_SECRET = "IfNlsgNrW5o6rfhayOURF1BcUDBcsrfgqss9g5inqeFytDbkgE"
-ACCESS_TOKEN = "973174862159253505-mAYpqjzegRXFNhdEPXOkDLsHWXePp7q"
-ACCESS_TOKEN_SECRET = "0mmfQcNDJBIFhMM9bexZSO1eIKhFdaP8JX9cMnBG81gJE"
+CONSUMER_KEY = "xxx"
+CONSUMER_SECRET = "xxx"
+ACCESS_TOKEN = "xxx"
+ACCESS_TOKEN_SECRET = "xx"
 
 api: UserAccountAPI = UserAccountAPI(
     consumer_key=CONSUMER_KEY,
